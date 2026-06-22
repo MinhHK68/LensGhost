@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LensGhost - Giải Thoát Ảnh AI & Chống Bóp Tương Tác</title>
+  
+  <!-- Strict Content Security Policy (CSP) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; object-src 'none';">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- FontAwesome Icons Local Script (SVG/JS offline) -->
+  <script src="assets/js/fontawesome.min.js"></script>
+  
+  <!-- EXIF Reader & Binary Exif Writer Local Libraries -->
+  <script src="assets/js/exif.js"></script>
+  <script src="assets/js/piexif.min.js"></script>
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER (Artist Art Gallery Theme Style - Tiếng Việt)
+       ============================================================ -->
+  <header class="header-box-upper">
+    <div class="menu-group">
+      <!-- Left Logo -->
+      <div class="header-logo">
+        <a href="#" class="logo-link">LensGhost</a>
+      </div>
+      
+      <!-- Center Navigation Links -->
+      <nav class="header-inner-menu">
+        <a href="#" class="nav-item active">Trang Chủ</a>
+        <a href="#dropzone" class="nav-item">Thanh Tẩy</a>
+        <a href="#canvasLayout" class="nav-item">Triển Lãm</a>
+        <a href="#exifPanel" class="nav-item">Lịch Sử</a>
+      </nav>
+      
+      <!-- Right Buttons / Icons -->
+      <div class="header-buttons">
+        <a href="#" class="header-icon-btn" title="Yêu thích"><i class="fa-regular fa-heart"></i></a>
+        
+        <!-- Status indicator mapped to cart style -->
+        <div class="header-status-indicator" id="headerStatusIndicator">
+          <span class="status-dot"></span>
+          <span id="statusText">Chờ tải ảnh...</span>
+        </div>
+        
+        <a href="#" class="header-icon-btn" title="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       LANDING PAGE (LensGhost Welcome View - Copy Đánh Vào Tâm Lý)
+       ============================================================ -->
+  <div id="landingPage" class="landing-page">
+    
+    <!-- Hero Section -->
+    <section class="landing-hero slider-main-box">
+      <div class="banner-section">
+        <div class="banner-inner-container">
+          <p class="banner-welcome">Chào Mừng Đến Với LensGhost</p>
+          <h2 class="banner-heading">Vũ khí bí mật tối ưu cho ảnh AI của bạn.</h2>
+          <p class="banner-subheading">
+            Các thuật toán mạng xã hội đang âm thầm quét siêu dữ liệu (EXIF) và chữ ký số ẩn của các công cụ AI (Gemini, ChatGPT, Midjourney...) để hạn chế hiển thị và "bóp tương tác" (reach) của bạn. LensGhost là bức màn tàng hình giúp bạn giải phóng tác phẩm nghệ thuật, khôi phục 100% lượng tiếp cận tự nhiên.
+          </p>
+          <div class="banner-buttons">
+            <a href="#btnStartNow" id="btnStartNow" class="btn-explore">Bắt Đầu Thanh Tẩy Ngay</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Features Grid -->
+    <section class="landing-features">
+      
+      <!-- Card 1: Xóa Watermark AI -->
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3 class="feature-title">Bóc Tách & Tự Động Xóa Logo AI</h3>
+        <p class="feature-desc">
+          Tự động phát hiện chính xác, bóc tách và xóa sạch logo Gemini, ChatGPT, Bing Creator ở các góc ảnh mà không làm mờ, nhòe hay biến dạng chi tiết xung quanh nhờ thuật toán inpainting tái cấu trúc thông minh.
+        </p>
+      </div>
+
+      <!-- Card 2: Làm Sạch Dấu Vết AI -->
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 class="feature-title">Làm Sạch Dấu Vết Thuật Toán</h3>
+        <p class="feature-desc">
+          Các công cụ tạo ảnh AI luôn đính kèm một chữ ký số ẩn (watermark vô hình) vào từng pixel. LensGhost áp dụng bộ lọc nhiễu hạt siêu nhỏ để bẻ gãy cấu trúc thuật toán này, đưa ảnh về dạng thuần khiết.
+        </p>
+      </div>
+
+      <!-- Card 3: Fake Metadata EXIF máy ảnh -->
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-camera"></i></div>
+        <h3 class="feature-title">Giả Lập EXIF Máy Ảnh Vật Lý</h3>
+        <p class="feature-desc">
+          Bơm ngược hồ sơ siêu dữ liệu EXIF/GPS hoàn toàn tự nhiên từ các máy ảnh cơ chuyên nghiệp (Sony A7 IV, Canon EOS R5) hoặc iPhone 15 Pro Max cùng toạ độ GPS ngẫu nhiên tại Việt Nam để đánh lừa mọi robot kiểm duyệt.
+        </p>
+      </div>
+
+      <!-- Card 4: Chống Bóp Tương Tác -->
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3 class="feature-title">Chống Bóp Tương Tác Mạng Xã Hội</h3>
+        <p class="feature-desc">
+          Bảo vệ lượt reach tự nhiên của bạn trên Facebook, TikTok, Zalo. Bức ảnh sau khi xử lý qua LensGhost sẽ hiển thị hoàn toàn dưới dạng một bức ảnh chụp thực tế bằng máy cơ, giúp tương tác của bạn bùng nổ trở lại.
+        </p>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- ============================================================
+       MAIN LAYOUT (Hidden by default, shown when Start Now is clicked)
+       ============================================================ -->
+  <div class="app-layout hidden">
+    
+    <!-- MAIN WORKSPACE -->
+    <main class="main-workspace">
+
+      <!-- DROPZONE AREA (Exhibition Frame style) -->
+      <div class="dropzone-wrapper">
+        <div id="dropzone" class="dropzone">
+          <input type="file" id="fileInput" accept=".jpg,.jpeg,.png" multiple style="display: none;">
+          <div id="dropzoneEmpty" class="dropzone-empty">
+            <div class="upload-icon-wrap">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <p class="upload-title">Kéo thả ảnh AI vào đây</p>
+            <p class="upload-sub">hoặc click để duyệt tệp từ máy tính</p>
+            <div class="upload-formats">
+              <span class="fmt-tag">.JPG</span>
+              <span class="fmt-tag">.JPEG</span>
+              <span class="fmt-tag">.PNG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKSPACE VIEW (CANVAS LAYOUT) -->
+      <div id="canvasLayout" class="canvas-layout">
+        
+        <!-- BATCH QUEUE STRIP (Polaroid Carousel Style - Tiếng Việt) -->
+        <div class="queue-section gallery-carousel-wrapper">
+          <div class="queue-header">
+            <span class="queue-title">
+              <i class="fa-solid fa-images" style="color: var(--color-accent);"></i>
+              Hàng đợi tác phẩm (Polaroid) (<span id="queueCount" style="color: var(--color-accent); font-family: monospace;">0</span>)
+            </span>
+            <div class="queue-actions">
+              <button id="addMoreBtn" class="btn-sm">
+                <i class="fa-solid fa-plus"></i> Thêm ảnh
+              </button>
+              <button id="clearQueueBtn" class="btn-sm btn-clear">
+                <i class="fa-solid fa-trash-can"></i> Xóa tất cả
+              </button>
+            </div>
+          </div>
+          
+          <div class="carousel-container-outer">
+            <!-- Left Navigation Button -->
+            <button class="carousel-nav-btn btn-prev" onclick="document.getElementById('queueList').scrollBy({left: -200, behavior: 'smooth'})" type="button" aria-label="Previous slide">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <div id="queueList" class="queue-list stackable-carousel-column">
+              <!-- Thumbnails injected here dynamically, styled as tilted Polaroids -->
+            </div>
+            
+            <!-- Right Navigation Button -->
+            <button class="carousel-nav-btn btn-next" onclick="document.getElementById('queueList').scrollBy({left: 200, behavior: 'smooth'})" type="button" aria-label="Next slide">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CANVAS IMAGES GRID (Museum Labeled Frames - Tiếng Việt) -->
+        <div class="canvas-row">
+          
+          <!-- ORIGINAL CANVAS PANEL (Framed Painting) -->
+          <div class="canvas-panel artwork-frame">
+            <div class="canvas-panel-header plaque-header">
+              <span class="canvas-panel-title">
+                <span class="canvas-badge badge-original">Ảnh gốc</span>
+                Bản Phác Thảo AI
+              </span>
+              <span id="origResolution" style="font-size: 11px; color: var(--color-accent); font-family: monospace;">0 x 0 px</span>
+            </div>
+            
+            <div class="canvas-body paintable-parent frame-passepartout">
+              <div style="position: relative; max-width: 100%; max-height: 320px;" class="frame-glass">
+                <canvas id="originalCanvas"></canvas>
+              </div>
+              <div class="canvas-instructions hidden" id="canvasInstructions">
+                <span>Giữ chuột & vẽ màu đỏ lên vùng logo cần xóa</span>
+              </div>
+            </div>
+            
+            <!-- Canvas Instructions Tip -->
+            <div class="canvas-tip">
+              <i class="fa-solid fa-crosshairs" style="color: var(--color-accent); font-size: 12px;"></i>
+              <span><strong>Định vị logo:</strong> Click trực tiếp vào vùng logo trên ảnh gốc để tự động căn chỉnh và khoanh vùng cọ xóa thông minh.</span>
+            </div>
+          </div>
+
+          <!-- OUTPUT CANVAS PANEL (Framed Painting) -->
+          <div class="canvas-panel artwork-frame">
+            <div class="canvas-panel-header plaque-header">
+              <span class="canvas-panel-title">
+                <span class="canvas-badge badge-output">Đầu ra</span>
+                Tác Phẩm Hoàn Thiện
+              </span>
+              <span id="outResolution" style="font-size: 11px; color: var(--color-accent); font-family: monospace;">0 x 0 px</span>
+            </div>
+            <div class="canvas-body frame-passepartout">
+              <div style="position: relative; max-width: 100%; max-height: 320px;" class="frame-glass">
+                <canvas id="outputCanvas"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- EXIF METADATA GRID (Guidebook details) -->
+        <div class="exif-panel" id="exifPanel">
+          <div class="exif-panel-header">
+            <span class="exif-title">
+              <i class="fa-solid fa-fingerprint" style="color: var(--color-accent); margin-right: 4px;"></i>
+              Thông Tin Kỹ Thuật (EXIF / Siêu dữ liệu)
+            </span>
+            <span id="aiWarning" class="ai-warning">
+              <i class="fa-solid fa-triangle-exclamation"></i> Phát hiện dấu vết AI!
+            </span>
+          </div>
+          <div id="exifGrid" class="exif-grid">
+            <!-- Grid tags list -->
+          </div>
+          <div id="exifEmpty" class="exif-empty">
+            Không tìm thấy siêu dữ liệu hoặc ảnh không có EXIF.
+          </div>
+        </div>
+
+        <!-- PROCESS STATS (CHIPS AFTER PROCESSING) -->
+        <div id="processStats" class="process-stats">
+          <div class="stat-chip">
+            <span class="stat-dot"></span>
+            Thời gian hoàn tác: <strong id="statTime">0ms</strong>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-dot"></span>
+            Dung lượng nén: <strong id="statSize">0 KB</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GALLERY FOOTER (WordPress Theme Mockup Footer Row) -->
+      <footer class="gallery-footer-row">
+        <!-- Visitor review section has been removed -->
+        <div style="flex: 1;"></div>
+        
+        <div class="footer-follow-us">
+          <div class="follow-us-label">Follow Me</div>
+          <div class="follow-us-socials">
+            <a href="https://www.facebook.com" target="_blank" class="social-link-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com" target="_blank" class="social-link-btn" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-link-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://dribbble.com" target="_blank" class="social-link-btn" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+            <a href="https://www.youtube.com" target="_blank" class="social-link-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+
+    <!-- RIGHT SIDEBAR PANEL (Museum Catalogue style) -->
+    <aside class="control-panel">
+      <div class="control-panel-header">
+        <h3 class="cp-title">Bộ Lọc Thanh Tẩy</h3>
+        
+        <!-- Tab navigation header -->
+        <div class="tab-bar">
+          <button class="tab-btn active" data-tab="metadata">
+            <i class="fa-solid fa-tags"></i> Metadata
+          </button>
+          <button class="tab-btn" data-tab="pixel-effects">
+            <i class="fa-solid fa-sliders"></i> Pixel
+          </button>
+          <button class="tab-btn" data-tab="watermark">
+            <i class="fa-solid fa-brush"></i> Xóa Logo
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab content metadata -->
+      <div id="tab-metadata" class="tab-content active">
+        <div class="cp-section">
+          <div class="cp-section-header">
+            <i class="fa-solid fa-eraser"></i> Loại bỏ dấu vết
+          </div>
+          <div class="cp-section-body">
+            <div class="switch-row">
+              <label class="switch-label" for="clearExifSwitch">
+                Xóa sạch EXIF / XMP
+                <div class="switch-desc">Xóa hoàn toàn mọi thông số, thẻ AI cũ</div>
+              </label>
+              <div class="toggle-wrap">
+                <input type="checkbox" id="clearExifSwitch" checked>
+                <label for="clearExifSwitch" class="toggle-slider"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cp-section">
+          <div class="cp-section-header">
+            <i class="fa-solid fa-camera"></i> Máy ảnh giả lập (Fake Profile)
+          </div>
+          <div class="cp-section-body">
+            <select id="cameraProfile" class="cp-select">
+              <option value="none">Không đổi (Chỉ xóa/giữ nguyên)</option>
+              <option value="iphone15pm" selected>iPhone 15 Pro Max</option>
+              <option value="sonya7iv">Sony A7 IV</option>
+              <option value="canonr5">Canon EOS R5</option>
+            </select>
+            <div class="cp-divider"></div>
+            <div id="profilePreview" class="info-chip">
+              <strong>Thông số EXIF sẽ chèn:</strong><br>
+              Make: <span id="profMake">-</span><br>
+              Model: <span id="profModel">-</span><br>
+              Lens: <span id="profLens" style="word-break: break-all;">-</span><br>
+              Aperture: <span id="profAp">-</span> | Shutter: <span id="profShutter">-</span><br>
+              GPS: <span style="color: var(--color-accent);">TP. Hồ Chí Minh (Ngẫu nhiên)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab content pixel -->
+      <div id="tab-pixel-effects" class="tab-content">
+        <div class="cp-section">
+          <div class="cp-section-header">
+            <i class="fa-solid fa-filter"></i> Phá vỡ cấu trúc AI
+          </div>
+          <div class="cp-section-body">
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-label">Nhiễu hạt film (Film Grain)</span>
+                <span id="grainValue" class="slider-value">12</span>
+              </div>
+              <input type="range" id="grainSlider" class="cp-range" min="0" max="100" value="12">
+            </div>
+            
+            <div class="cp-divider"></div>
+            
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-label">Làm mềm rìa (Soften Edge)</span>
+                <span id="softenValue" class="slider-value">8</span>
+              </div>
+              <input type="range" id="softenSlider" class="cp-range" min="0" max="100" value="8">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab content logo eraser -->
+      <div id="tab-watermark" class="tab-content">
+        <div class="cp-section">
+          <div class="cp-section-header">
+            <i class="fa-solid fa-magic-wand-style"></i> Tự động hóa
+          </div>
+          <div class="cp-section-body">
+            <div class="switch-row">
+              <label class="switch-label" for="autoGeminiSwitch">
+                Tự động xóa Logo Gemini
+                <div class="switch-desc">Tự động phát hiện & xóa logo ở góc dưới phải</div>
+              </label>
+              <div class="toggle-wrap">
+                <input type="checkbox" id="autoGeminiSwitch" checked>
+                <label for="autoGeminiSwitch" class="toggle-slider"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cp-section">
+          <div class="cp-section-header">
+            <i class="fa-solid fa-paintbrush"></i> Cọ xóa thủ công
+          </div>
+          <div class="cp-section-body">
+            <div class="switch-row">
+              <label class="switch-label" for="paintSwitch">
+                Kích hoạt cọ vẽ xóa Logo
+                <div class="switch-desc">Tô vẽ đỏ lên vùng chứa logo/watermark bất kỳ</div>
+              </label>
+              <div class="toggle-wrap">
+                <input type="checkbox" id="paintSwitch">
+                <label for="paintSwitch" class="toggle-slider"></label>
+              </div>
+            </div>
+            
+            <div class="cp-divider"></div>
+            
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-label">Kích thước cọ vẽ</span>
+                <span id="brushValue" class="slider-value">20px</span>
+              </div>
+              <div class="brush-row">
+                <input type="range" id="brushSlider" class="cp-range" min="5" max="50" value="20" style="flex: 1;">
+                <div id="brushPreview" class="brush-preview"></div>
+              </div>
+            </div>
+
+            <div class="cp-divider"></div>
+
+            <button id="clearMaskBtn" class="btn-sm" style="width: 100%; justify-content: center; padding: 8px;">
+              <i class="fa-solid fa-eraser"></i> Xóa vết tô hiện tại
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="action-bar">
+        <!-- Progress bar inside action bar -->
+        <div id="progressWrap" class="progress-bar-wrap">
+          <div id="progressFill" class="progress-bar-fill"></div>
+        </div>
+        <button id="processBtn" class="btn btn-primary" disabled>
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Xử lý & Thanh tẩy ảnh
+        </button>
+        <button id="downloadBtn" class="btn btn-success" disabled>
+          <i class="fa-solid fa-circle-down"></i> Tải ảnh sạch về máy (.JPG)
+        </button>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Toast notification system container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- App Script -->
+  <script src="app.min.js?v=1.6"></script>
+</body>
+</html>
