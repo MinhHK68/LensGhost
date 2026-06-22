@@ -14,16 +14,13 @@
 
 ## 🎨 Giao Diện Ứng Dụng (Exhibition Art Gallery)
 
-Dưới đây là một số hình ảnh thực tế về giao diện của LensGhost, được thiết kế theo phong cách phòng trưng bày nghệ thuật sang trọng (Charcoal Dark & Gold Accent) dựa trên theme WordPress Artist Art Gallery:
+Dưới đây là hình ảnh thực tế về giao diện của LensGhost, được thiết kế theo phong cách phòng trưng bày nghệ thuật sang trọng (Charcoal Dark & Gold Accent) dựa trên theme WordPress Artist Art Gallery:
 
 ### 1. Trang Chủ / Landing Page Thu Hút
-![Trang Chủ LensGhost](screenshot.png)
+![Trang Chủ LensGhost](screenshot1.png)
 
-### 2. Giao Diện Xử Lý Canvas Triển Lãm & Polaroid Carousel
-![Giao Diện Triển Lãm](screenshot1.png)
-
-### 3. Trình Quản Lý & Giả Lập Siêu Dữ Liệu EXIF
-![Thông Số Siêu Dữ Liệu EXIF](screenshot2.png)
+### 2. Giao Diện Xử Lý Canvas & Bộ Lọc Thanh Tẩy
+![Giao Diện Triển Lãm](screenshot2.png)
 
 ---
 
