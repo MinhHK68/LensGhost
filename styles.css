@@ -1554,3 +1554,103 @@ h1, h2, h3, h4, h5, h6, .app-title, .cp-title, .queue-title, .canvas-panel-title
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   SEO ARTICLES & BLOG SECTION
+   ============================================================ */
+.landing-seo-articles {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.seo-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.seo-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  transition: border-color 0.3s ease;
+}
+
+.seo-card:hover {
+  border-color: rgba(172, 131, 77, 0.4);
+}
+
+.seo-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.2px;
+}
+
+.seo-card-title i {
+  color: var(--color-accent);
+  font-size: 16px;
+}
+
+.seo-card-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.seo-card-text p {
+  margin-bottom: 12px;
+}
+
+.seo-card-text p:last-child {
+  margin-bottom: 0;
+}
+
+.seo-card-text a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-accent);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.seo-card-text a:hover {
+  color: var(--color-accent-light);
+  border-bottom-style: solid;
+}
+
+/* Special Author card */
+.author-highlight-card {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(172, 131, 77, 0.05) 0%, rgba(20, 20, 20, 0.8) 100%);
+  border-left: 3px solid var(--color-accent);
+}
+
+@media (max-width: 992px) {
+  .seo-grid {
+    grid-template-columns: 1fr;
+  }
+  .author-highlight-card {
+    grid-column: span 1;
+  }
+}
+

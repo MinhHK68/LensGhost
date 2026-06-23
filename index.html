@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LensGhost - Giải Thoát Ảnh AI & Chống Bóp Tương Tác</title>
+  <title>LensGhost - Xóa Metadata Ảnh AI, Khôi Phục Thông Số Máy Ảnh Thật</title>
+  <meta name="description" content="Công cụ miễn phí giúp xóa sạch dấu vết ảnh AI, xóa watermark ẩn, fake metadata iPhone/Sony để chống bóp tương tác trên Facebook, TikTok vĩnh viễn.">
+  <meta name="author" content="Huỳnh Kiến Minh (MinhHK)">
+  <meta name="copyright" content="Huỳnh Kiến Minh - MinhHK">
   
   <!-- Strict Content Security Policy (CSP) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; object-src 'none';">
@@ -17,6 +20,25 @@
   <!-- EXIF Reader & Binary Exif Writer Local Libraries -->
   <script src="assets/js/exif.js"></script>
   <script src="assets/js/piexif.min.js"></script>
+  
+  <!-- Structured Data JSON-LD (Schema Markup) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "LensGhost",
+    "url": "https://lensghost-tool.web.app",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Windows, macOS, Android, iOS",
+    "author": {
+      "@type": "Person",
+      "name": "Huỳnh Kiến Minh",
+      "alternateName": ["MinhHK", "Huỳnh Kiến Minh", "Huynh Kien Minh"],
+      "jobTitle": "Information Security Student & Developer"
+    },
+    "description": "Công cụ xóa và fake metadata ảnh AI được phát triển bởi Huỳnh Kiến Minh (MinhHK)."
+  }
+  </script>
 </head>
 <body>
 
@@ -63,7 +85,7 @@
       <div class="banner-section">
         <div class="banner-inner-container">
           <p class="banner-welcome">Chào Mừng Đến Với LensGhost</p>
-          <h2 class="banner-heading">Vũ khí bí mật tối ưu cho ảnh AI của bạn.</h2>
+          <h1 class="banner-heading">Vũ khí bí mật tối ưu cho ảnh AI của bạn.</h1>
           <p class="banner-subheading">
             Các thuật toán mạng xã hội đang âm thầm quét siêu dữ liệu (EXIF) và chữ ký số ẩn của các công cụ AI (Gemini, ChatGPT, Midjourney...) để hạn chế hiển thị và "bóp tương tác" (reach) của bạn. LensGhost là bức màn tàng hình giúp bạn giải phóng tác phẩm nghệ thuật, khôi phục 100% lượng tiếp cận tự nhiên.
           </p>
@@ -113,6 +135,90 @@
         </p>
       </div>
 
+    </section>
+
+    <!-- SEO Articles & FAQ Section (Google Search indexing optimization) -->
+    <section class="landing-seo-articles">
+      <h2 class="seo-section-title">LensGhost: Công cụ làm sạch và Fake Metadata ảnh AI</h2>
+      
+      <div class="seo-grid">
+        <!-- Article 1 -->
+        <article class="seo-card">
+          <h3 class="seo-card-title">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Tại sao ảnh AI bị bóp tương tác trên mạng xã hội?
+          </h3>
+          <div class="seo-card-text">
+            <p>
+              Hiện nay, các nền tảng mạng xã hội lớn như Facebook, Instagram, TikTok và Zalo đang tích cực áp dụng các thuật toán tự động quét dữ liệu hình ảnh. Khi bạn đăng tải ảnh được tạo từ các công cụ AI (Gemini, ChatGPT, Midjourney, Stable Diffusion...), robot kiểm duyệt sẽ quét các thẻ siêu dữ liệu ẩn (EXIF/XMP) hoặc phát hiện chữ ký số pixel ẩn (SynthID) để nhận diện và dán nhãn "Made with AI".
+            </p>
+            <p>
+              Việc này gián tiếp làm sụt giảm nghiêm trọng lượng tiếp cận (reach) tự nhiên và làm giảm lượng view các tác phẩm của các nhà sáng tạo. Nếu bạn đang tìm <strong>cách đăng ảnh AI lên Facebook không bị bóp tương tác</strong> hay thắc mắc <strong>tại sao đăng ảnh AI lên TikTok bị ít view</strong>, câu trả lời nằm ở siêu dữ liệu và cấu trúc pixel của file ảnh.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="seo-card">
+          <h3 class="seo-card-title">
+            <i class="fa-solid fa-code"></i>
+            Cách xóa prompt ẩn trong file ảnh Midjourney & lột siêu dữ liệu XMP
+          </h3>
+          <div class="seo-card-text">
+            <p>
+              Các phần mềm tạo ảnh AI luôn nhúng lịch sử câu lệnh (prompt), thông tin bản quyền phần mềm và ID tài khoản trực tiếp vào cấu hình ảnh. Điều này làm lộ thông tin riêng tư và giúp robot dễ dàng phát hiện ảnh AI. 
+            </p>
+            <p>
+              Để giải quyết triệt để, bạn cần tìm xem <strong>xóa siêu dữ liệu XMP của ảnh AI ở đâu</strong>. LensGhost cung cấp giải pháp <a href="#dropzone" class="seo-nav-link">công cụ fake dữ liệu ảnh chụp</a> hàng loạt, giúp bạn tự động lọc và xóa sạch 100% lịch sử prompt nhúng ẩn, lột sạch siêu dữ liệu XMP/EXIF cũ chỉ trong một click chuột.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="seo-card">
+          <h3 class="seo-card-title">
+            <i class="fa-solid fa-camera"></i>
+            Hướng dẫn sửa thông số EXIF máy ảnh cho ảnh tạo bằng AI
+          </h3>
+          <div class="seo-card-text">
+            <p>
+              Sau khi loại bỏ dữ liệu cũ, ảnh của bạn sẽ hoàn toàn trống thông tin. Để đánh lừa các robot quét ảnh, LensGhost cho phép bạn bơm ngược các hồ sơ EXIF vật lý hợp lệ từ các thiết bị chụp cao cấp (như iPhone 15 Pro Max, Sony A7 IV, Canon EOS R5) kèm các thông số khẩu độ, tốc độ màn trập chân thực.
+            </p>
+            <p>
+              Công nghệ này hoạt động như một <strong>phần mềm chèn thông số camera iPhone vào ảnh AI</strong>, đồng thời tự động tính toán tọa độ GPS ngẫu nhiên tại Việt Nam. Sử dụng <a href="#dropzone" class="seo-nav-link">công cụ làm sạch ảnh AI chạy trực tiếp trên trình duyệt</a> của chúng tôi giúp bạn dễ dàng vượt qua các bộ quét tự động và tăng độ uy tín cho file ảnh.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="seo-card">
+          <h3 class="seo-card-title">
+            <i class="fa-solid fa-shield-halved"></i>
+            Làm sao để ảnh Midjourney không bị dán nhãn Made with AI?
+          </h3>
+          <div class="seo-card-text">
+            <p>
+              Ngoài siêu dữ liệu, chữ ký số ẩn nhúng trong các pixel (watermark vô hình) là một nguyên nhân lớn khiến ảnh bị dán nhãn AI. LensGhost áp dụng các bộ lọc nâng cao bao gồm <em>Nhiễu hạt film (Film Grain)</em> và <em>Làm mềm rìa (Soften Edge)</em> để bẻ gãy cấu trúc pixel tuần hoàn này của AI.
+            </p>
+            <p>
+              Đây là <strong>mẹo đăng ảnh Stable Diffusion lên fanpage cắn đề xuất</strong> hiệu quả nhất hiện nay. Chỉ cần xử lý ảnh qua bộ lọc của chúng tôi, bạn có thể tự tin chia sẻ tác phẩm của mình lên mạng xã hội dưới dạng một bức ảnh chụp thực tế bằng máy cơ chuyên nghiệp.
+            </p>
+          </div>
+        </article>
+
+        <!-- About Author Card (Về tác giả) -->
+        <article class="seo-card author-highlight-card">
+          <h3 class="seo-card-title">
+            <i class="fa-solid fa-user-shield"></i>
+            Về tác giả dự án LensGhost
+          </h3>
+          <div class="seo-card-text">
+            <p>
+              Dự án LensGhost được nghiên cứu và phát triển bởi <strong>Huỳnh Kiến Minh (MinhHK)</strong>, hiện là sinh viên chuyên ngành An toàn thông tin. Nhận thấy lỗ hổng lớn về siêu dữ liệu (metadata) trên các bức ảnh tạo bởi trí tuệ nhân tạo khiến các nhà sáng tạo nội dung dễ bị thuật toán bóp tương tác, MinhHK đã xây dựng công cụ này hoàn toàn miễn phí nhằm giúp làm sạch file và bảo vệ quyền riêng tư cho người dùng.
+            </p>
+          </div>
+        </article>
+      </div>
     </section>
 
   </div>
@@ -264,7 +370,9 @@
       <!-- GALLERY FOOTER (WordPress Theme Mockup Footer Row) -->
       <footer class="gallery-footer-row">
         <!-- Visitor review section has been removed -->
-        <div style="flex: 1;"></div>
+        <div class="footer-copyright" style="font-size: 11px; color: var(--text-muted); font-family: 'Poppins', sans-serif; letter-spacing: 0.2px;">
+          © 2026 LensGhost. Phát triển bởi Huỳnh Kiến Minh (MinhHK). All rights reserved.
+        </div>
         
         <div class="footer-follow-us">
           <div class="follow-us-label">Follow Me</div>
