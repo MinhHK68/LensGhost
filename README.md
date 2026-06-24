@@ -1,71 +1,73 @@
-# 👻 LensGhost - Giải Thoát Ảnh AI & Chống Bóp Tương Tác
+# 👻 LensGhost - Xóa Metadata Ảnh AI & Khôi Phục Thông Số Máy Chống Bóp Tương Tác
 
-[**LensGhost**](https://lensghost-tool.web.app) là vũ khí tàng hình tối thượng dành cho các nhà sáng tạo nội dung nghệ thuật số (Digital Artists), nhiếp ảnh gia và người dùng mạng xã hội. 
-
-Ứng dụng giúp bạn tự động loại bỏ logo AI, bẻ gãy chữ ký số ẩn, giả lập thông số máy ảnh vật lý chuyên nghiệp (EXIF/GPS) để đưa ảnh trở về trạng thái "thuần khiết" như chụp từ máy cơ, khôi phục và tối ưu hóa 100% lượt tiếp cận (reach) tự nhiên trên các nền tảng mạng xã hội (Facebook, Instagram, TikTok, Zalo, v.v.).
+> **LensGhost** (https://lensghost-tool.web.app) là công cụ chuyên nghiệp, miễn phí giúp xóa sạch metadata ảnh AI, watermark bản quyền ẩn, và giả lập thông số máy ảnh vật lý (EXIF/GPS) để đưa ảnh trở về trạng thái chụp thực tế. Giải pháp tối ưu hóa 100% lượt tiếp cận tự nhiên (organic reach) và chống bóp tương tác trên Facebook, Instagram, TikTok, Zalo.
 
 ---
 
-## 🔗 Liên Kết Trực Tiếp
+## 🔗 Liên Kết Quan Trọng
 * **Trang chủ ứng dụng:** [https://lensghost-tool.web.app](https://lensghost-tool.web.app)
-* **GitHub Repository:** [https://github.com/MinhHK68/LensGhost](https://github.com/MinhHK68/LensGhost)
+* **Mã nguồn GitHub:** [https://github.com/MinhHK68/LensGhost](https://github.com/MinhHK68/LensGhost)
 
 ---
 
-## 🎨 Giao Diện Ứng Dụng (Exhibition Art Gallery)
+## ❓ Tại sao bạn cần xóa metadata ảnh AI và fake thông số máy?
 
-Dưới đây là hình ảnh thực tế về giao diện của LensGhost, được thiết kế theo phong cách phòng trưng bày nghệ thuật sang trọng (Charcoal Dark & Gold Accent) dựa trên theme WordPress Artist Art Gallery:
+Hiện nay, các mạng xã hội như Facebook, TikTok sử dụng bộ lọc AI tự động quét siêu dữ liệu (metadata) của ảnh:
+1. **Bóp tương tác tự động:** Ảnh được xuất từ Midjourney, Stable Diffusion, DALL-E, Bing Creator... chứa siêu dữ liệu phần mềm AI. Các robot quét thấy nhãn AI này sẽ tự động giảm ưu tiên phân phối bài viết.
+2. **Watermark ẩn bảo quyền:** Nhiều công cụ tạo ảnh tự động chèn chữ ký số pixel (invisible watermark) để nhận diện.
+3. **Mất thông số máy vật lý:** Ảnh AI hoàn toàn không có thông số EXIF (khẩu độ, tốc độ màn trập, tiêu cự, dòng máy...) như ảnh chụp thông thường, khiến thuật toán MXH dễ dàng nhận biết đó là ảnh nhân tạo.
 
-### 1. Trang Chủ / Landing Page Thu Hút
-![Trang Chủ LensGhost](screenshot1.png)
-
-### 2. Giao Diện Xử Lý Canvas & Bộ Lọc Thanh Tẩy
-![Giao Diện Triển Lãm](screenshot2.png)
-
----
-
-## 🔥 Các Tính Năng Vượt Trội
-
-### 1. Bóc Tách & Tự Động Xóa Logo/Watermark AI
-* **Tự động hóa:** Phát hiện thông minh và tự động tẩy sạch các logo AI đặc trưng (như Gemini ở góc phải dưới) mà không làm biến dạng các chi tiết xung quanh.
-* **Thủ công:** Tích hợp cọ vẽ thông minh (Inpaint brush) màu đỏ nổi bật giúp bạn khoanh vùng và xóa bỏ chính xác bất kỳ watermark, văn bản, hoặc vật thể thừa nào trên ảnh.
-
-### 2. Bẻ Gãy Chữ Ký Số Vô Hình (Invisible AI Watermarks)
-* Các mô hình tạo ảnh AI (như Midjourney, Stable Diffusion, DALL-E 3) luôn gắn một chữ ký số ẩn sâu trong cấu trúc pixel để robot kiểm duyệt nhận diện.
-* LensGhost cung cấp bộ lọc **Nhiễu hạt film (Film Grain)** và **Làm mềm rìa (Soften Edge)** để bẻ gãy kết cấu pixel thuật toán này mà vẫn giữ nguyên chất lượng thẩm mỹ cho ảnh.
-
-### 3. Giả Lập EXIF & Vị Trí Địa Lý (GPS) Vật Lý
-* Xóa sạch các thẻ siêu dữ liệu cũ (XMP, EXIF, IPTC) chứa thông tin phần mềm thiết kế AI.
-* Bơm ngược hồ sơ máy ảnh vật lý cực kỳ chi tiết bao gồm hãng sản xuất, dòng máy, ống kính, khẩu độ, tốc độ màn trập từ các cấu hình cao cấp:
-  * **iPhone 15 Pro Max**
-  * **Sony A7 IV**
-  * **Canon EOS R5**
-* Tự động chèn tọa độ GPS ngẫu nhiên tại Việt Nam (Hà Nội, TP. Hồ Chí Minh, Đà Nẵng...) để đánh lừa hoàn toàn các robot quét vị trí của Facebook/TikTok.
-
-### 4. Bảo Mật Tuyệt Đối (Offline 100% Client-Side)
-* Mọi tác vụ xử lý ảnh đều diễn ra trực tiếp ngay trên trình duyệt máy tính của bạn. **Không có bất kỳ dữ liệu hình ảnh nào được tải lên máy chủ**.
-* Tích hợp Content Security Policy (CSP) cực kỳ nghiêm ngặt với thuộc tính `connect-src 'none'` cấm hoàn toàn mọi kết nối mạng từ mã độc, đảm bảo thông tin và tác phẩm của bạn được bảo vệ tuyệt đối.
+**LensGhost** chính là giải pháp bẻ gãy bộ lọc kiểm duyệt này bằng cách **xóa metadata ảnh AI** và **fake metadata máy ảnh vật lý**.
 
 ---
 
-## 🛠️ Công Nghệ Sử Dụng
-* **Frontend:** HTML5, Vanilla CSS3 (Custom Typography, Glassmorphism, Micro-animations).
-* **Core Logic:** Pure JavaScript (đã được làm rối mã nguồn `app.min.js` để bảo vệ tài sản trí tuệ và chống sao chép).
-* **Dependencies:** Chạy hoàn toàn cục bộ 100% không qua CDN trung gian:
-  * [exif.js](assets/js/exif.js) (Đọc siêu dữ liệu)
-  * [piexif.min.js](assets/js/piexif.min.js) (Ghi và chỉnh sửa siêu dữ liệu nhị phân)
-  * [fontawesome.min.js](assets/js/fontawesome.min.js) (Hệ thống icon offline)
+## 🔥 Các tính năng nổi bật của LensGhost
+
+### 1. Tẩy sạch dấu vết & Xóa metadata ảnh AI
+- Tự động xóa sạch siêu dữ liệu XMP, EXIF, IPTC chứa lịch sử chỉnh sửa từ phần mềm vẽ AI.
+- Làm sạch tệp tin 100%, bảo vệ quyền riêng tư cá nhân.
+
+### 2. Khôi phục thông số máy ảnh chuyên nghiệp (Fake EXIF)
+- Bơm ngược cấu hình thông số kỹ thuật thực tế giống như ảnh được chụp trực tiếp từ các thiết bị cao cấp:
+  - **Apple iPhone** (iPhone 14/15 Pro Max)
+  - **Sony Alpha** (Sony A7 IV, Sony A7R...)
+  - **Canon EOS R5 / Nikon Z7**
+- Khôi phục thông số ống kính, ISO, tiêu cự, khẩu độ, tốc độ chụp cực kỳ tự nhiên.
+
+### 3. Bẻ gãy chữ ký số ẩn (Invisible AI Watermarks)
+- Tích hợp bộ lọc **Nhiễu hạt film (Film Grain)** và **Làm mềm rìa (Soften Edge)** để bẻ gãy kết cấu pixel thuật toán chữ ký ẩn mà không làm giảm tính thẩm mỹ của tác phẩm nghệ thuật.
+
+### 4. Tự động xóa logo AI & Watermark vật lý
+- Quét thông minh và xóa bỏ logo AI ở góc ảnh bằng cọ vẽ (Inpaint brush) màu đỏ nổi bật trực quan, giúp khôi phục các vùng bị che khuất một cách tự nhiên.
+
+### 5. An toàn bảo mật (Offline 100% Client-Side)
+- Xử lý trực tiếp trên trình duyệt của bạn bằng JavaScript, cam kết **không tải hình ảnh lên máy chủ** (No upload server).
+- Tích hợp Content Security Policy (CSP) nghiêm ngặt với `connect-src 'none'` ngăn chặn tuyệt đối rò rỉ dữ liệu.
 
 ---
 
-## 🚀 Hướng Dẫn Sử Dụng
-1. Truy cập [lensghost-tool.web.app](https://lensghost-tool.web.app).
-2. Nhấn nút **Bắt Đầu Thanh Tẩy Ngay** trên trang chủ.
-3. Kéo thả một hoặc nhiều ảnh vào khu vực **Submit Frame** hoặc bấm để duyệt tệp.
-4. Điều chỉnh bộ lọc ở bảng điều khiển bên phải:
-   * Chọn cấu hình máy ảnh giả lập muốn chèn (Ví dụ: *Sony A7 IV*).
-   * Kéo thanh trượt để thêm lượng *Nhiễu hạt film* mong muốn.
-   * Kích hoạt *Cọ vẽ xóa logo* và tô đỏ lên vùng chứa watermark trên ảnh gốc (nếu có).
-5. Nhấn **Xử lý & Thanh tẩy ảnh** và đợi trong giây lát.
-6. Bấm **Tải ảnh sạch về máy (.JPG)** để lưu bức ảnh đã được bảo vệ.
-7. Đăng tải tự tin lên mạng xã hội và tận hưởng lượng tương tác tối đa!
+## 🛠️ Công nghệ phát triển dự án
+
+Dự án được xây dựng hoàn toàn bằng công nghệ Web thuần túy, tối ưu hóa tốc độ tải trang cực nhanh:
+* **Frontend:** HTML5, Vanilla CSS3 (Glassmorphism, Custom Typography, Micro-animations).
+* **Core Logic:** Pure JavaScript (bảo mật mã nguồn qua `app.min.js`).
+* **Thư viện chạy offline:**
+  - `exif.js` (Phân tích metadata)
+  - `piexif.min.js` (Chỉnh sửa và ghi nhị phân siêu dữ liệu EXIF)
+  - `fontawesome.min.js` (Hệ thống icon ngoại tuyến)
+
+---
+
+## 🚀 Hướng dẫn sử dụng chi tiết
+
+1. Truy cập công cụ tại [lensghost-tool.web.app](https://lensghost-tool.web.app).
+2. Kéo thả bức ảnh AI cần xử lý vào khung **Submit Frame**.
+3. Chọn thiết bị giả lập mong muốn ở bảng điều khiển bên phải (Ví dụ: *Sony A7 IV*).
+4. Kéo thanh trượt để chèn thêm độ *Nhiễu hạt film* giúp bẻ gãy chữ ký số ẩn.
+5. Dùng *Cọ tô màu đỏ* bôi lên vùng logo/watermark cần xóa.
+6. Nhấp **Xử lý & Thanh tẩy ảnh**.
+7. Tải ảnh sạch về máy và tự tin chia sẻ lên mạng xã hội để đạt lượng tiếp cận tối đa!
+
+---
+
+*Phát triển bởi **[MinhHK68](https://github.com/MinhHK68)**. Nếu dự án giúp ích cho bạn, hãy tặng chúng tôi 1 Star trên GitHub! ⭐*
